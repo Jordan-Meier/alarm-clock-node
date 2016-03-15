@@ -4,9 +4,21 @@
     <link rel="stylesheet" href="build/css/vendor.css">
     <script src="build/js/vendor.min.js"></script>
     <script type="text/javascript" src="build/js/app.js"></script>
+    <title>Alarm Clock</title>
   </head>
   <body>
-    <h3>Well look at the time! </h3>
-    <h3 id="time"></h3>
+    <div class="container">
+      <h3>Well look at the time! </h3>
+      <h2 id="time"></h2>
+
+      <h3>Set an alarm</h3>
+        <form class="form-group" id="alarm">
+          <label for="alarm-time">Title:</label>
+          <input id="alarm-time" type="time">
+
+          <button id="alarm-set" type="submit">Set Alarm</button>
+        </form>
+        <h4 id ="confirm">Alarm was set for <span id="alarm-confirm"></span></h4>
+    </div>
   </body>
 </html>
