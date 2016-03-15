@@ -15,23 +15,16 @@ $(document).ready(function(){
 
     //get alarm and show it
     alarm = $('#alarm-time').val();
+    console.log(alarm);
     $('#confirm').show();
     $('#alarm-confirm').text(alarm);
     $('#set-alarm-div').hide();
   });
-
-    // function setOffAlarm() {
-    //   if (alarm) {
-    //   console.log(alarm);
-    //   alert("ALARM IS SET");
-    //   }
-    // }
-
      function setOffAlarm() {
-       console.log(moment().format("hh:mm a"));
-       console.log(alarm);
+      //  console.log(moment().format("hh:mm a"));
+      //  console.log(alarm);
        if (alarm) {
-         if (moment().format("hh:mm") === alarm) {
+         if (moment().format("HH:mm") === alarm) {
            $('#alarm-sounding').show();
            alarm = null;
          }
