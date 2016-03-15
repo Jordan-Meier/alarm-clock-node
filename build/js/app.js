@@ -1,1 +1,31 @@
-!function r(n,e,o){function t(u,f){if(!e[u]){if(!n[u]){var c="function"==typeof require&&require;if(!f&&c)return c(u,!0);if(i)return i(u,!0);var s=new Error("Cannot find module '"+u+"'");throw s.code="MODULE_NOT_FOUND",s}var a=e[u]={exports:{}};n[u][0].call(a.exports,function(r){var e=n[u][1][r];return t(e?e:r)},a,a.exports,r,n,e,o)}return e[u].exports}for(var i="function"==typeof require&&require,u=0;u<o.length;u++)t(o[u]);return t}({1:[function(r,n,e){},{}],2:[function(r,n,e){r("./../js/clock.js").pingPong},{"./../js/clock.js":1}]},{},[2]);
+(function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({1:[function(require,module,exports){
+exports.Clock = function(time) {
+  this.time = time;
+};
+
+exports.Clock.prototype.setOffAlarm = function(alarm) {
+  if (this.time === alarm);
+}
+
+},{}],2:[function(require,module,exports){
+var Clock = require('./../js/clock.js').Clock;
+// var moment = require('moment');
+
+
+$(document).ready(function(){
+  var clock = new Clock(moment().format("dddd h:mm:ss a"));
+  $('#confirm').hide();
+  $('#time').text(moment().format("dddd h:mm:ss a"));
+  $('#alarm').submit(function(event){
+    event.preventDefault();
+    var alarm = $('#alarm-time').val();
+      $('#confirm').show();
+      $('#alarm-confirm').text(alarm);
+    });
+
+    if (clock.setOffAlarm(alarm)) {
+      $('.container').css('background-color', 'red');
+    };
+  });
+
+},{"./../js/clock.js":1}]},{},[2]);
