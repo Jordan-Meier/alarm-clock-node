@@ -1,0 +1,23 @@
+{
+  "name": "alarm_clock",
+  "description": "",
+  "main": "alarm.js",
+  "authors": [
+    "Jordan Meier and Mary Warrington"
+  ],
+  "license": "ISC",
+  "moduleType": [],
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "^2.2.1",
+    "bootstrap": "^3.3.6",
+    "moment": "^2.12.0"
+  }
+}
